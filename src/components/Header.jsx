@@ -57,7 +57,7 @@ export default function Header() {
         userDetails.lastname.charAt(0).toUpperCase()
       );
     }
-    return "US";
+    return "";
   };
 
   return (
@@ -94,9 +94,9 @@ export default function Header() {
                   <Button>Login</Button>
                 </Link>
               </Nav>
-              <Nav>
+              <Nav className="me-5">
                 <Link className="text-decoration-none m-3" to="/signupscreen">
-                  <Button>Sign Up</Button>
+                  <Button >Sign Up</Button>
                 </Link>
               </Nav>
             </>

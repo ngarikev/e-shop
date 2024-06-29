@@ -73,8 +73,9 @@
   }
 
   .searchIcon{
-    background-color: transparent !important;
+    margin-left: -290px !important;
   }
+  
 }
 
 /********Homepage*******/
