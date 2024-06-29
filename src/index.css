@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&family=Nosifer&family=Space+Mono:wght@400;700&display=swap');
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  overflow-x: hidden;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.container{
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  
+}
+/*******Navbar********/
+.bg-nav{
+  background-color: antiquewhite;
+  border-bottom: 1px gray solid;
+  box-shadow: 0 5px 10px #0000004d;
+}
+.brand{
+  font-size: 36px;
+  font-family: 'Nosifer', sans-serif;
+  font-weight: 800;
+}
+
+.hero{
+  filter: brightness(.7); 
+}
+.hero-card {
+  background-color: rgba(0, 0, 0, .4);
+  border-color: #fe7d1b !important;
+}
+@media screen and (max-width: 960px) {
+  .hero-card {
+   display: none; 
+  }
+}
+
+
+/*********signin and signup forms********/
+.form{
+  max-width: 600px;
+  border-radius: 8px;
+  background-color: #f5b2b42b;
+  box-shadow: 0 5px 10px #0000004d;
+}
+.btn{
+  background-color: rgb(254, 125, 27);
+  border: none;
+}
+.btn:hover{
+  background-color: rgb(235, 106, 8);
+}
+@media screen and (max-width: 960px) {
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .last-name{
+    margin-top: 1rem !important;
+  }
+
+  .searchIcon{
+    background-color: transparent !important;
+  }
+}
+
+/********Homepage*******/
+
+hr{
+  border: 2px solid rgb(254, 125, 27);
+
+}
+.item{
+  background-color: #f5b2b42b;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+.item:hover{
+  background-color: rgb(254, 125, 27);
+}
+
+.bold{
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.card-text{
+  line-height: .8rem; 
+}
+.para{
+  font-size: 14px;
+}
+.star{
+  margin-bottom: .8rem !important; 
+}
+
+
+
+.option{
+  border: 2px solid #fe7d1b;
+}
+.title{
+  font-size: 24px;
+}
+.price{
+  font-size: 20px;
+}
+
+.searchIcon{
+  background-color: transparent !important;
+}
