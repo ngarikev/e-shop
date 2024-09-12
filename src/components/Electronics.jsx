@@ -16,7 +16,9 @@ export default function Electronics() {
             <Col key={i}>
               <Link to={`/product/${item.id}`} className="text-decoration-none">
                 <div className=" card card-electronic item mb-3">
-                  <img src={item.Img} className="card-img-top img-fluid" alt="electronic"/>
+                  <img src={item.Img} 
+                  loading="lazy"
+                  className="card-img-top img-fluid" alt="electronic"/>
 
                   <div className="card-body">
                     <h4 className="card-title">{item.name}</h4>

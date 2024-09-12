@@ -54,7 +54,11 @@ export default function Slide() {
       <div className="position-absolute border rounded hero-card top-50 start-0 ms-5 text-white">
         <h2 className="text-center mt-5">We Sell</h2>
         <div>
-          <Button className="m-3" variant="primary" onClick={() => setModalShow(true)}>
+          <Button
+            className="m-3"
+            variant="primary"
+            onClick={() => setModalShow(true)}
+          >
             Search
           </Button>
 

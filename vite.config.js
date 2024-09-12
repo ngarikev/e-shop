@@ -13,6 +13,9 @@ export default defineConfig({
     "process.env": process.env
   },
   build: {
-    sourcemap: true,
+    sourcemap: false, 
+    target: 'esnext', 
+    minify: 'terser', 
+    brotliSize: false, 
   },
 });
