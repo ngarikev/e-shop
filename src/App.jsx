@@ -1,22 +1,26 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import SigninScreen from "./screens/SigninScreen.jsx";
-import SignupScreen from "./screens/SignupScreen.jsx";
-import HomeScreen from "./screens/HomeScreen.jsx";
-import ProductScreen from "./screens/ProductScreen.jsx";
 import { CheckoutScreen } from "./screens/CheckoutScreen.jsx";
-import SearchScreen  from "./screens/SearchScreen.jsx";
+import Loader from "./components/Loader.jsx";
+
+
+const HomeScreen = lazy(() => import('./screens/HomeScreen.jsx'));
+const ProductScreen = lazy(() => import('./screens/ProductScreen.jsx'));
+const SignupScreen = lazy(() => import('./screens/SignupScreen.jsx'));
+const SigninScreen = lazy(() => import('./screens/SigninScreen.jsx'));
+const SearchScreen = lazy(() => import('./screens/SearchScreen.jsx'));
+
+
 
 function App() {
   return (
     <>
       <Router>
-      
+      <Suspense fallback={<Loader />}>
         <main>
           <Routes>
-            <Route path="/" exact element={<HomeScreen />} />
+            <Route path="/" element={<HomeScreen />} />
             <Route path="/product/:id" element={<ProductScreen />} />
             <Route path="/signupscreen" element={<SignupScreen />} />
             <Route path="/signinscreen" element={<SigninScreen />} />
@@ -24,6 +28,8 @@ function App() {
             <Route path="/search" element={<SearchScreen />} />
           </Routes>
         </main>
+      </Suspense>
+        
       </Router>
     </>
   );
