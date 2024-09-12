@@ -12,6 +12,7 @@ export const CheckoutScreen = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showPayPalButtons, setShowPayPalButtons] = useState(false);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -42,6 +43,9 @@ export const CheckoutScreen = () => {
     console.log("Proceed to payment, isLoggedIn:", isLoggedIn);
     if (isLoggedIn) {
       setShowPayPalButtons(true);
+      if (!scriptLoaded) {
+        setScriptLoaded(true);  // Load the script on first payment button click
+      }
     } else {
       navigate("/signinscreen");
     }
@@ -85,7 +89,7 @@ export const CheckoutScreen = () => {
                   <td>{item.quantity}</td>
                   <td>${calculateSubtotal(item.price, item.quantity).toFixed(2)}</td>
                   <td>
-                    <Button variant="danger" onClick={() => handleRemoveFromCart(item.id)}>
+                    <Button variant="danger" aria-label="Remove item from cart" onClick={() => handleRemoveFromCart(item.id)}>
                       <i className="fa-solid fa-trash-can"></i>
                     </Button>
                   </td>

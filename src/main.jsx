@@ -14,7 +14,7 @@ const clientId = process.env.VITE_REACT_APP_CLIENT_ID;
 ReactDOM.createRoot(document.getElementById("root")).render(
   <CartProvider>
     <UserProvider>
-      <PayPalScriptProvider options={{ "client-id": clientId }}>
+      <PayPalScriptProvider  options={{ "client-id": clientId }} async={false}>
         <App />
       </PayPalScriptProvider>
       <ToastContainer />

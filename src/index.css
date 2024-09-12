@@ -15,8 +15,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  overflow-x: hidden;
 }
+
 .container{
   height: 100vh;
   flex-direction: column;
@@ -108,7 +109,9 @@ hr{
   margin-bottom: .8rem !important; 
 }
 
-
+h4{
+  font-size: 16px;
+}
 
 .option{
   border: 2px solid #fe7d1b;
@@ -122,4 +125,13 @@ hr{
 
 .searchIcon{
   background-color: transparent !important;
+}
+@media screen and (min-width: 960px) {
+ 
+  .card{
+    height: 380px;
+  }
+  .card-electronic{
+    height: 450px;
+  }
 }

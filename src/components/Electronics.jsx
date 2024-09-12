@@ -15,11 +15,11 @@ export default function Electronics() {
           {ElectronicsData.map((item, i) => (
             <Col key={i}>
               <Link to={`/product/${item.id}`} className="text-decoration-none">
-                <div className="card item mb-3">
-                  <img src={item.Img} className="card-img-top img-fluid" />
+                <div className=" card card-electronic item mb-3">
+                  <img src={item.Img} className="card-img-top img-fluid" alt="electronic"/>
 
                   <div className="card-body">
-                    <h5 className="card-title">{item.name}</h5>
+                    <h4 className="card-title">{item.name}</h4>
 
                     <div className="star">
                       <StarRating rating={item.rating} />

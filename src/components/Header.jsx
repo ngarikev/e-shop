@@ -102,14 +102,20 @@ export default function Header() {
             </>
           ) : (
             <div
-              onMouseOver={() => setOpenUser(true)}
-              onMouseLeave={() => {
-                setTimeout(() => {
-                  if (!second) {
-                    setOpenUser(false);
-                  }
-                }, 1000);
-              }}
+            onMouseOver={() => setOpenUser(true)}
+            onMouseLeave={() => {
+              setTimeout(() => {
+                setOpenUser(false); // Removed the condition
+              }, 1000);
+            }}
+              // onMouseOver={() => setOpenUser(true)}
+              // onMouseLeave={() => {
+              //   setTimeout(() => {
+              //     if (!second) {
+              //       setOpenUser(false);
+              //     }
+              //   }, 1000);
+              // }}
               className="position-relative me-5"
             >
               <div className="btn btn-dark rounded-circle text-uppercase">
